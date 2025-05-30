@@ -106,13 +106,15 @@ function AppContent() {
             <Route path="/inicio-sesion" element={<InicioSeccion />} />
             <Route path="/register" element={<Register />} />
             <Route
-              path="/dashboard"
-              element={
-                <RutaProtegida>
-                  <Dashboard />
-                </RutaProtegida>
-              }
-            />
+  path="/dashboard"
+  element={
+    // Pasa el rol requerido como prop
+    <RutaProtegida requiredRole="admin"> 
+      <Dashboard />
+    </RutaProtegida>
+  }
+/>
+            
           </Routes>
         </main>
 

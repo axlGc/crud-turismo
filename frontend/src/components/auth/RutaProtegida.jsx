@@ -6,7 +6,7 @@ const RutaProtegida = ({ children }) => {
   const isAuthenticated = !!localStorage.getItem('token'); 
 
   if (!isAuthenticated) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/dashboard" replace />;
   }
 
   return children;

@@ -13,7 +13,9 @@ const Dashboard = () => {
   if (!user || user.rol !== 'admin') {
     navigate('/');
     return null;
+   
   }
+   console.error('no');
 
   const [usuarios, setUsuarios] = useState([]);
 
